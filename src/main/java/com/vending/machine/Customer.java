@@ -10,4 +10,8 @@ public class Customer {
     public boolean checkIfCustomerHasBalance() {
         return balance > 0;
     }
+
+    public double getBalance() {
+        return this.balance;
+    }
 }
