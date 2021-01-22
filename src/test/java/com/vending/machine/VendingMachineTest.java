@@ -95,4 +95,25 @@ public class VendingMachineTest {
         assertEquals(3,vendingMachine.cancelTransaction(),0);
     }
 
+    @Test
+    public void checkBalanceOfVendingMachine_Administrator() {
+        VendingMachine vendingMachine = new VendingMachine(1000);
+        assertEquals(1000,vendingMachine.getBalance(),0);
+    }
+
+    @Test
+    public void withdrawMoneyFromMachine_Administrator() {
+        VendingMachine vendingMachine=new VendingMachine(1000);
+        Administrator administrator = new Administrator(vendingMachine);
+        administrator.withdrawMoney(100);
+        assertEquals(900, vendingMachine.getBalance(),0);
+    }
+
+    @Test
+    public void depositMoneyFromMachine_Administrator() {
+        VendingMachine vendingMachine=new VendingMachine(1000);
+        Administrator administrator = new Administrator(vendingMachine);
+        administrator.depositMoney(200);
+        assertEquals(1200, vendingMachine.getBalance(),0);
+    }
 }

@@ -9,6 +9,7 @@ import java.util.Map;
 
 public class VendingMachine {
 
+    private double balance;
     private List<Item> items = new ArrayList<>();
     private Customer customer;
 
@@ -17,6 +18,10 @@ public class VendingMachine {
     }
 
     public VendingMachine(){}
+
+    public VendingMachine(double balance) {
+        this.balance=balance;
+    }
 
     public boolean checkItemsIsEmpty() {
         return items.isEmpty();
@@ -67,5 +72,13 @@ public class VendingMachine {
 
     public double cancelTransaction() {
         return customer.getBalance();
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
     }
 }
