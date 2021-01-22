@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.vending.machine.VendingMachineTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-01-22T17:09:21" hostname="LTUS135768" time="0.008">
+<testsuite name="com.vending.machine.VendingMachineTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-01-22T18:00:22" hostname="LTUS135768" time="0.006">
   <properties/>
-  <testcase name="addItemsToVendingMachine" classname="com.vending.machine.VendingMachineTest" time="0.008"/>
-  <testcase name="checkNoItemsInStockIsEmpty" classname="com.vending.machine.VendingMachineTest" time="0.0"/>
+  <testcase name="addItemsToVendingMachine_Administrator" classname="com.vending.machine.VendingMachineTest" time="0.004"/>
+  <testcase name="checkIfNonExistentItemInStock_Customer" classname="com.vending.machine.VendingMachineTest" time="0.001"/>
+  <testcase name="checkNoItemsInStockIsEmpty_Administrator" classname="com.vending.machine.VendingMachineTest" time="0.0"/>
+  <testcase name="checkAvailableItemsInStock_Customer" classname="com.vending.machine.VendingMachineTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
