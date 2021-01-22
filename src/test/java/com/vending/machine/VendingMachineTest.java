@@ -102,6 +102,12 @@ public class VendingMachineTest {
     }
 
     @Test
+    public void checkBalance_Customer() {
+        Customer customer = new Customer(100);
+        assertEquals(100,customer.getBalance(),0);
+    }
+
+    @Test
     public void withdrawMoneyFromMachine_Administrator() {
         VendingMachine vendingMachine=new VendingMachine(1000);
         Administrator administrator = new Administrator(vendingMachine);
@@ -115,5 +121,26 @@ public class VendingMachineTest {
         Administrator administrator = new Administrator(vendingMachine);
         administrator.depositMoney(200);
         assertEquals(1200, vendingMachine.getBalance(),0);
+    }
+
+    /**
+     * Given I have inserted enough money for an item
+     * When I enter the item code
+     * Then I get the item
+     * And the balance of the vending machine goes up by that amount
+     * And the item is removed from the stock
+     */
+    @Test
+    public void purchaseAnItem_Customer() {
+        Customer customer = new Customer(20);
+        VendingMachine vendingMachine = new VendingMachine(customer);
+        Item item1 = new Item(1,"Chocolate",4.99);
+        Item item2 = new Item(2, "Coca-Cola", 2.49);
+        vendingMachine.addItemsToTheStock(item1);
+        vendingMachine.addItemsToTheStock(item2);
+        assertEquals(item1,vendingMachine.getItemByItemCode(1));
+        assertEquals(1,vendingMachine.getItems().size());
+        assertEquals(4.99,vendingMachine.getBalance(),0);
+
     }
 }

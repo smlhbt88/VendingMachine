@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.vending.machine.VendingMachineTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2021-01-22T20:19:44" hostname="LTUS135768" time="0.015">
+<testsuite name="com.vending.machine.VendingMachineTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2021-01-22T20:46:45" hostname="LTUS135768" time="0.016">
   <properties/>
   <testcase name="getItemAndChangeIfHadBalance_Customer" classname="com.vending.machine.VendingMachineTest" time="0.009"/>
   <testcase name="checkBalanceOfVendingMachine_Administrator" classname="com.vending.machine.VendingMachineTest" time="0.0"/>
+  <testcase name="purchaseAnItem_Customer" classname="com.vending.machine.VendingMachineTest" time="0.0"/>
   <testcase name="addItemsToVendingMachine_Administrator" classname="com.vending.machine.VendingMachineTest" time="0.0"/>
   <testcase name="checkIfNonExistentItemInStock_Customer" classname="com.vending.machine.VendingMachineTest" time="0.0"/>
-  <testcase name="cancelItemFullAmountRefunded_Customer" classname="com.vending.machine.VendingMachineTest" time="0.0"/>
+  <testcase name="cancelItemFullAmountRefunded_Customer" classname="com.vending.machine.VendingMachineTest" time="0.001"/>
   <testcase name="checkNoItemsInStockIsEmpty_Administrator" classname="com.vending.machine.VendingMachineTest" time="0.0"/>
   <testcase name="depositMoneyFromMachine_Administrator" classname="com.vending.machine.VendingMachineTest" time="0.002"/>
   <testcase name="withdrawMoneyFromMachine_Administrator" classname="com.vending.machine.VendingMachineTest" time="0.0"/>
-  <testcase name="insufficientFundWhenBuyingAnItem_Customer" classname="com.vending.machine.VendingMachineTest" time="0.001"/>
+  <testcase name="checkBalance_Customer" classname="com.vending.machine.VendingMachineTest" time="0.0"/>
+  <testcase name="insufficientFundWhenBuyingAnItem_Customer" classname="com.vending.machine.VendingMachineTest" time="0.0"/>
   <testcase name="checkAvailableItemsInStock_Customer" classname="com.vending.machine.VendingMachineTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

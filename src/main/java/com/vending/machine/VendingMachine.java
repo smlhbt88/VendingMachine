@@ -2,10 +2,7 @@ package com.vending.machine;
 
 import java.math.BigDecimal;
 import java.math.MathContext;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class VendingMachine {
 
@@ -80,5 +77,19 @@ public class VendingMachine {
 
     public void setBalance(double balance) {
         this.balance = balance;
+    }
+
+    public Item getItemByItemCode(int itemCode) {
+        for(Item item: items) {
+            if(item.getItemCode() == itemCode) {
+                Item buffer = item;
+                //Adding balance to vending machine
+                setBalance(getBalance()+ item.getPrice());
+                //remove item from stock
+                items.remove(item);
+                return buffer;
+            }
+        }
+        return null;
     }
 }
